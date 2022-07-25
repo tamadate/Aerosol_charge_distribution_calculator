@@ -5,7 +5,7 @@ As shown in following figure, this code assume that the particle charge distribu
 ## Theory
 ### Population balance equaiton
 The elementary reaction of the charging process is the second order reaction as:
-
+$\n$
 $$A^z+B^{\pm}{\rightarrow}A^{z\pm1}$$
 
 where $A$ is $z$ charged particle and $B$ is the ion.  Also, actual right hand is $AB^{z\pm1}$ but ion $B$ is generally omitted since it negligibly smaller than the particle $A$. Based on this reaction, the populaiton balance equaiton is given as:
