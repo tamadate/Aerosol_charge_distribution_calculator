@@ -3,7 +3,7 @@
 As shown in following figure, this code assume that the particle charge distribution is changed by traveling the ion existing space (e.g., ionizer but this calcualtion is not only applicable to high ion concentration but low one).  The initial charge distribution of $z$ charged particle is given as $N_z(d_p,0)$ and it is changed to $N_z(d_p,t)$ by colliding with ions for residence time in the ionizer ($t$).  
 ## Theory
 ### Population balance equaiton
- \tThe elementary reaction of the charging process is the second order reaction as:
+The elementary reaction of the charging process is the second order reaction as:
 $$A^z+B^{\pm}{\rightarrow}A^{z\pm1}$$
 where $A$ is $z$ charged particle and $B$ is the ion.  Also, actual right hand is $AB^{z\pm1}$ but ion $B$ is generally omitted since it negligibly smaller than the particle $A$. Based on this reaction, the populaiton balance equaiton is given as:
 $${dN_{z}\over{dt}}=-\beta_{z}^{+}N_{+}N_{z}-\beta_{z}^{-}N_{-}N_{z}+\beta_{z+1}^{-}N_{-}N_{z+1}+\beta_{z-1}^{+}N_{+}N_{z-1}$$
