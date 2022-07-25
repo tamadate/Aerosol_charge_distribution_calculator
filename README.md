@@ -9,5 +9,7 @@ where A is z charged particle and B is the ion. Hence, the populaiton balance eq
 dN/dt=...
 Nz is the concentraiton of Az and N+/N- are the positive/negative charged ion concentrations.  Here, the 
 ### Collision rate coefficient theory
-
 ## Usage
+### Use execute file
+### Run on the Python
+
