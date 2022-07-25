@@ -4,8 +4,8 @@ As shown in following figure, this code assume that the particle size distributi
 ## Theory
 ### Population balance equaiton
 The elementary reaction of the charging process is the second order reaction as:
-$$ 
-(A^z+B->AB) 
+$$
+(A^z+B->AB)
 $$
 where $A$ is $z$ charged particle and $B$ is the ion. Hence, the populaiton balance equaiton is given as:
 $$ dN/dt=... $$
