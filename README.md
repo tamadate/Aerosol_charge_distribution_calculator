@@ -4,7 +4,7 @@ As shown in following figure, this code assume that the particle size distributi
 ## Theory
 ### Population balance equaiton
 The elementary reaction of the charging process is the second order reaction as:
-$$(A^z+B/rightarrowAB)$$
+$$(A^z+B^{\pm}\rightarrowAB^{z\pm1})$$
 where $A$ is $z$ charged particle and $B$ is the ion. Hence, the populaiton balance equaiton is given as:
 $${dN\over{dt}}=-\beta_{z}^{+}N_{+}N_{z}-\beta_{z}^{-}N_{-}N_{z}+\beta_{z+1}^{-}N_{-}N_{z+1}+\beta_{z-1}^{+}N_{+}N_{z-1}$$
 $N_z$ is the concentraiton of $A^z$ and N+/N- are the positive/negative charged ion concentrations.  Here, the 
