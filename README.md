@@ -6,7 +6,7 @@ As shown in following figure, this code assume that the particle size distributi
 The elementary reaction of the charging process is the second order reaction as:
 $$A^z+B^{\pm}{\rightarrow}A^{z\pm1}$$
 where $A$ is $z$ charged particle and $B$ is the ion.  Also, actual right hand is $AB^{z\pm1}$ but ion $B$ is generally omitted since it negligibly smaller than the particle $A$. Based on this reaction, the populaiton balance equaiton is given as:
-$${dN\over{dt}}=-\beta_{z}^{+}N_{+}N_{z}-\beta_{z}^{-}N_{-}N_{z}+\beta_{z+1}^{-}N_{-}N_{z+1}+\beta_{z-1}^{+}N_{+}N_{z-1}$$
+$${dN_{z}\over{dt}}=-\beta_{z}^{+}N_{+}N_{z}-\beta_{z}^{-}N_{-}N_{z}+\beta_{z+1}^{-}N_{-}N_{z+1}+\beta_{z-1}^{+}N_{+}N_{z-1}$$
 $N_z$ is the concentraiton of charged particle $A^z$ and $N_{+}/N_{-}$ are the positive/negative charged ion concentrations.  Here, the 
 ### Collision rate coefficient theory
 ## Usage
