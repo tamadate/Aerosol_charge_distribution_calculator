@@ -1,6 +1,6 @@
 # Particle-Charge-Distribution-Calculator
 ## Overview
-As shown in following figure, this code assume that the particle charge distribution is changed by traveling the ion existing space (e.g., ionizer but this calcualtion is not only applicable to high ion concentration but low one).  The initial charge distribution of $z$ charged particle is given as $N_z(d_p,0)$ and it is changed to $N_z(d_p,t)$ by colliding with ions for residence time in the ionizer ($t$). 
+As shown in following figure, this code assume that the particle charge distribution is changed by traveling the ion existing space (e.g., ionizer but this calcualtion is not only applicable to high ion concentration but low one).  The initial charge distribution of $z$ charged particle is given as $N_z(d_p,0)$ and it is changed to $N_z(d_p,t)$ by colliding with ions for residence time in the ionizer ($t$).  
 
 ## Theory
 ### Population balance equaiton
