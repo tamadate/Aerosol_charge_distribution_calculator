@@ -12,7 +12,7 @@ $N_z$ is the concentraiton of charged particle $A^z$ and $N_{+}/N_{-}$ are the p
 ### Collision rate coefficient calculation ($\beta$)
 #### Limiting sphere model (Fuchs)
 Fuchs' limiting sphere theory is:
-$$\beta_z^{\pm}={{\pi}c_{\pm}{\guzai}^2exp(-{\phi}({\delta})/k_bT)} \over {1+exp(-{\phi}({\delta})/k_bT){c_{\pm}{\guzai}{\delta}^2}\over{4D_{\pm}a}}$$
+$$\beta_z^{\pm}={{\pi}c_{\pm}{\guzai}^2exp(-{\phi}({\delta})/k_bT)\over1+exp(-{\phi}({\delta})/k_bT){c_{\pm}{\guzai}{\delta}^2}\over{4D_{\pm}a}}$$
 See here or our paper in detail.
 #### Modified limiting sphere model (Hoppel & Frick)
 Under preparation
