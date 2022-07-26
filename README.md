@@ -11,12 +11,15 @@ $${dN_{z}\over{dt}}=-\beta_{z}^{+}N_{+}N_{z}-\beta_{z}^{-}N_{-}N_{z}+\beta_{z+1}
 $N_z$ is the concentraiton of charged particle $A^z$ and $N_{+}/N_{-}$ are the positive/negative charged ion concentrations.  $\beta_{z}^{\pm}$ is the collision rate coefficient of $z$ charged particle and ion ($A^z$ and $B^{\pm}$ ).  While concentrations are experimental conditions, collision rate coefficient is theoretically estimatable and that calculation process is shown in following section.
 ### Collision rate coefficient calculation ($\beta$)
 #### Limiting sphere model (Fuchs)
-Limiting sphere approach have been widely used as a calculation method for the collision rate coefficient in transition regime.    
+Fuchs' limiting sphere theory is:
+$$\beta=a\over{b}$$
+See here or our paper in detail.
 #### Modified limiting sphere model (Hoppel & Frick)
 Under preparation
 #### LD based equation
+LD based equation is given as:
 ### Time evolution
-
+In this code, 4th order Runge-Kutta method is applied as a time evolution method.
 ## Usage
 ### Use execute file
 ### Run on the Python
