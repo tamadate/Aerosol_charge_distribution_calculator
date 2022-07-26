@@ -37,7 +37,7 @@ In this code, 4th order Runge-Kutta method is applied as a time evolution method
 ### Run on the Python
 1. Download files and run the chargeDistributionCalculator.py from the src.
 2. Follow execute one.
-# Author
+## Author
 * Tomoya Tamadate
 * University of Minnesota
 * tamalab0109[at]gmail.com
