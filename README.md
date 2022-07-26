@@ -1,6 +1,6 @@
 # Particle-Charge-Distribution-Calculator
 ## Overview
-This code calculate the variation of particle charge distribution.  It is assumed that the particle charge distribution is changed by traveling the ion existing space (e.g., ionizer but this calcualtion is not only applicable to high ion concentration cases).  The initial charge distribution of $z$ charged particle is given as $N_z(d_p,0)$ and it is changed to $N_z(d_p,t)$ by colliding with ions for residence time in the charging area ($t$).  
+This code calculate the variation of particle charge distribution.  It is assumed that the particle charge distribution is changed by traveling the ion existing space (e.g., ionizer but this calcualtion is not only applicable to high ion concentration cases).  At that time, the initial charge distribution of $z$ charged particle is given as $N_z(d_p,0)$ and it is changed to $N_z(d_p,t)$ by colliding with ions for residence time in the charging area ($t$).  
 
 ## Theory
 ### Population balance equaiton
