@@ -12,16 +12,16 @@ $N_z$ is the concentraiton of charged particle $A^z$ and $N_{+}/N_{-}$ are the p
 In this equaiton, the concentrations are experimental conditions and collision rate coefficients are theoretically estimatable parameter which  calculation method is shown in following part.
 ### Collision rate coefficient calculation ($\beta$)
 Currently, this code support three different collision rate coefficient calculaiton method (Fuchs, Hoppel & Frick, and LD based).
-#### Limiting sphere model (Fuchs)
+* Limiting sphere model (Fuchs)
 Fuchs proposed follwing equaiton which called limiting sphere theory:
 $$\beta_z^{\pm} = {{{\pi}c_{\pm}p^2exp[-{\phi}({\delta})/k_bT]} \over {1+exp[-{\phi}({\delta})/k_bT]{{c_{\pm}p{\delta}^2} \over {4D_{\pm}a}}}\int_0^{a/{\delta}}exp(-{\phi}(a/x)/k_bT)dx}$$  
 $${\phi}(r)={z_{ion}ze^2 \over 4{\pi}\epsilon_0r} - {\epsilon-1 \over \epsilon+1}{e^2a^3 \over 8{\pi}\epsilon_0r^2(r^2-a^2)}$$  
 where, $c_{\pm}$ is the ions mean thermal velocity, $p$ is the collision probability, $\delta$ is the radius of the limiting sphere, $k_b$ is Boltzumann constant, $T$ is the temperature, $D_{\pm}$ is the ion diffusion coefficient, $a$ is the particle radius, $\phi(r)$ is the ion-particle potential function which generally defined as a sum of the electric and image potential, $z_{ion}$ is the ion's number of charge (${\pm}1$), $r$ is ion-particle distance, and $\epsilon_0$ is the dielectric constant of vacuum.  
 You can find more detail from this link.
-#### Modified limiting sphere model (Hoppel & Frick)
+* Modified limiting sphere model (Hoppel & Frick)
 Under preparation
 
-#### LD based equation
+* LD based equation
 LD based equation is given as:
 ### Time evolution
 In this code, 4th order Runge-Kutta method is applied as a time evolution method.
