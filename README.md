@@ -2,6 +2,8 @@
 ## Overview
 This code calculate the variation of particle charge distribution.  It is assumed that the particle charge distribution is changed by traveling the ion existing space (e.g., ionizer but this calcualtion is not only applicable to high ion concentration cases).  At that time, the initial charge distribution of $z$ charged particle is given as $N_z(d_p,0)$ and it is changed to $N_z(d_p,t)$ by colliding with ions for residence time in the charging area ($t$).  
 
+![IonizationProcess](https://user-images.githubusercontent.com/75816343/181148783-0b59f3d4-7f05-4a97-83fd-7ecc74bad322.png)
+
 ## Theory
 ### Population balance equaiton
 The elementary reaction of the charging process is the second order reaction as:  
