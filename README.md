@@ -1,9 +1,9 @@
 # Aerosol charge distribution calculator
 ## Overview
-This code calculate the variation of particle charge distribution.  It is assumed that the particle charge distribution is changed by traveling the ion existing space (e.g., ionizer but this calcualtion is not only applicable to high ion concentration cases).  At that time, the initial charge distribution of $z$ charged particle is given as $N_z(d_p,0)$ and it is changed to $N_z(d_p,t)$ by colliding with ions for residence time in the charging area ($t$).  
+This code calculate the variation of particle charge distribution.  It is assumed that the particle charge distribution is changed by colliding with positive or negative ions during traveling the ion existing space.  For example, charging process via ion generator (ionizer) as shown in follwing figure is typical calculation case but it should be noted that applicable ion concentration of this code is not limited to high concentration.  Also, this code can be applied to the any positive/negative ion balance (i.e., both of the unipolar and bipolar is calculatable).   
 
 ![IonizationProcess](https://user-images.githubusercontent.com/75816343/181148783-0b59f3d4-7f05-4a97-83fd-7ecc74bad322.png)
-
+Figure 1. Schematic diagram of charging process as one of the example application of this code.  Particle have a arbitrary charge distribution as shown before path through the charger (left figure) and the charge distribution is varied since the colliding with the ions during passing through the charger (right figure).  In this schematic, the downstream charge distribution is shifted to positive charge because the ion polarity in the charger has positive bias.
 ## Theory
 ### Population balance equaiton
 The elementary reaction of the charging process is the second order reaction as:  
