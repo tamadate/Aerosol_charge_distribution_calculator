@@ -1,13 +1,12 @@
 # Aerosol charge distribution calculator
 ## Overview
-This code calculate the variation of particle charge distribution.  It is assumed that the particle charge distribution is changed by colliding with positive or negative ions during traveling the ion existing space.  For example, charging process via ion generator (ionizer) as shown in follwing figure is typical calculation case but it should be noted that applicable ion concentration of this code is not limited to high concentration.  Also, this code can be applied to the any positive/negative ion balance (i.e., both of the unipolar and bipolar is calculatable).  
-  
-  
-
+This code calculate the variation of particle charge distribution.  It is assumed that the particle charge distribution is changed by colliding with positive or negative ions during traveling the ion existing space.  For example, charging process via ion generator (ionizer) as shown in follwing figure is typical calculation case but it should be noted that applicable ion concentration of this code is not limited to high concentration.  Also, this code can be applied to the any positive/negative ion balance (i.e., both of the unipolar and bipolar is calculatable).
+<br>
+<br>  
 ![IonizationProcess](https://user-images.githubusercontent.com/75816343/181148783-0b59f3d4-7f05-4a97-83fd-7ecc74bad322.png)
-Figure 1. Schematic diagram of charging process.  Particle have a arbitrary charge distribution before passing through the charger (left) and the it is varied at after passing the charger (right).  In this schematic, the after distribution is shifted to positive side because the ion polarity in the charger is positive biased.  
-  
-  
+Figure 1. Schematic diagram of charging process.  Particle have a arbitrary charge distribution before passing through the charger (left) and the it is varied at after passing the charger (right).  In this schematic, the after distribution is shifted to positive side because the ion polarity in the charger is positive biased.
+<br>
+<br>
 ## Theory
 ### Population balance equaiton
 The elementary reaction of the charging process is the second order reaction as:  
