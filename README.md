@@ -19,15 +19,13 @@ In this equaiton, the concentrations are experimental conditions and collision r
 Currently, this code support three different collision rate coefficient calculaiton method (Fuchs, Hoppel & Frick, and LD based).
 * Limiting sphere model (Fuchs)
 Fuchs proposed follwing equaiton which called limiting sphere theory:
-$$\beta_z^{\pm} = {{{\pi}c_{\pm}p{\delta}^2exp[-{\phi}({\delta})/k_bT]} \over {1+exp[-{\phi}({\delta})/k_bT]{{c_{\pm}p{\delta}^2} \over {4D_{\pm}a}}}\int_0^{a/{\delta}}exp(-{\phi}(a/x)/k_bT)dx}$$  
+$$\beta_z^{\pm} = {{{\pi}c_{\pm}p{\delta}^2exp[-{\phi}({\delta})/k_bT]} \over {1+exp[-{\phi}({\delta})/k_bT]{{c_{\pm}p{\delta}^2} \over {4D_{\pm}a}}}\int_0^{a/{\delta}}exp({\phi}(a/x)/k_bT)dx}$$  
 $${\phi}(r)={z_{ion}ze^2 \over 4{\pi}\epsilon_0r} - {\epsilon-1 \over \epsilon+1}{e^2a^3 \over 8{\pi}\epsilon_0r^2(r^2-a^2)}$$  
 where, $c_{\pm}$ is the ions mean thermal velocity, $p$ is the collision probability, $\delta$ is the radius of the limiting sphere, $k_b$ is Boltzumann constant, $T$ is the temperature, $D_{\pm}$ is the ion diffusion coefficient, $a$ is the particle radius, $\phi(r)$ is the ion-particle potential function which generally defined as a sum of the electric and image potential, $z_{ion}$ is the ion's number of charge (${\pm}1$), $r$ is ion-particle distance, and $\epsilon_0$ is the dielectric constant of vacuum.  Collision probability $p$ is difined as a number of atoms per total injecting atoms to the limiting sphere and it is calculated in this theory from:
-$$p={[b(min) \over \delta]}^2$$
-$$b^2=\rho_m(1+{2k_bT \over 3}[\phi(\delta)-\phi(\rho_m)])
-You can find more detail from this link.
-* Modified limiting sphere model (Hoppel & Frick)
+$$p=({b_{min} \over \delta})^2$$<br>
+where, $b_{min}$ is the collision parameter for limit trajectory that is estimated from particle trajectory in the limiting sphere.  The detail of this calculation can be found from this link.
+* Modified limiting sphere model (Hoppel & Frick)<br>
 Under preparation
-
 * LD based equation
 LD based equation is given as:
 ### Time evolution
@@ -44,6 +42,7 @@ In this code, 4th order Runge-Kutta method is applied as a time evolution method
 ### Run on the Python
 1. Download files and run the chargeDistributionCalculator.py from the src.
 2. Follow execute one.
+## Reference
 ## Author
 * Dr. Tomoya Tamadate
 * [LinkedIn](https://www.linkedin.com/in/tomoya-tamadate-953673142/)/[ResearchGate](https://www.researchgate.net/profile/Tomoya-Tamadate)/[Google Scholar](https://scholar.google.com/citations?user=XXSOgXwAAAAJ&hl=ja)
