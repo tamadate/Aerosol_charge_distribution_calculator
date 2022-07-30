@@ -29,7 +29,7 @@ Under preparation
 * LD based equation
 LD based equation is given as:
 ### Time evolution
-In this code, 4th order Runge-Kutta method is applied as a time evolution method.
+In this code, 4th order Runge-Kutta method is applied for the time evolution.
 ## Usage
 ### Use execute file
 1. Download files and open chargeDistributionCalculator.exe from downloaded directory then following window is displayed on your computer:
