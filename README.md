@@ -32,14 +32,14 @@ LD based equation is given as:
 In this code, 4th order Runge-Kutta method is applied for the time evolution.
 ## Usage
 ### Use execute file
-1. Download files and open chargeDistributionCalculator.exe from downloaded directory then following window is displayed on your computer:
-
+1. Download files and open chargeDistributionCalculator.exe from downloaded directory then a window is displayed on your computer as shown in the right panel of the Figure2.
 2. Input physical properties: (1) section is the physical properties.  General air conditions are automatically filled out when you push "Set air normal conditions".  Your values can be typed in each boxes as an input value.  It should be noted that when you change the particle diameter, the particle diffusion coefficient is needed to recalculate by "Calculate diffusion coefficient" or you need to retype in an appropriate value.
 3. Set initial concentrations: (2) section is the normalized initial concentrations of each charge state $N_z/N_0$.  "Set C0" set 1 as a $z=0$ initial concentration and 0 as for the other charge statements which mean all particle is neutral at the starting time.  It can be typed in your own initial values.
 4. Set collision rate coefficient: (3) section is collision rate coefficients.  Left column is for the collision with "negative" ions ($\beta_z^-$) right column is for the "positive" ions ($\beta_z^+$).  "Set Beta Fuchs" generate the values based on Fuchs' theory and the image potential effect can be controled from the check box (exclude image potential if you don't check the image force check box).  "Set Beta CG" is for the LD based equation.  You are also able to type in your own values.  
-5. Run "Solve dn/dt" and the time evolution of the charge distribution is displayed as shown in the left panel of below figure.  Where, the small ratio of charged particles are not displayed (<0.1% of total concentration).<br><br>
-![image](https://user-images.githubusercontent.com/75816343/181936306-05244df6-9fbc-4393-ab4d-d7710c7b668f.png)<br>
-6. The output file "a.dat" is created in your running directory.
+5. Run "Solve dn/dt" and the time evolution of the charge distribution is displayed as shown in the left panel of Figure2.  Where, the small ratio of charged particles are not displayed (<0.1% of total concentration).
+6. The output file "a.dat" is created in your running directory.<br><br>
+![image](https://user-images.githubusercontent.com/75816343/181936522-99344d0b-d4c1-4258-8e5e-3af9c96c06e9.png)
+Figure2 Capture of the charge distribution calculator.  Right panel is the control window and left display the simulation procedure which is continiously updated calculating charge distribution.<br><br>
 ### Run on the Python
 1. Download files and run the chargeDistributionCalculator.py from the src.
 2. Follow execute one.
