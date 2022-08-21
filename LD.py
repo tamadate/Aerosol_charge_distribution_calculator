@@ -1,4 +1,5 @@
 import numpy as np
+import math
 import functions
 import physicalProp
 import Fuchs
