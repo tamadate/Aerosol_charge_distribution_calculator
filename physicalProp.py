@@ -34,8 +34,8 @@ class PP:
 	ap=dp*0.5
 	Cc=functions.Cc(dp)
 	mp=functions.mp(dp,rhop)
-	ramda=functions.ramda(Dion,mig,T)
-	delta=functions.delta(ap,ramda)
+	lamda=functions.lamda(Dion,mig,T)
+	delta=functions.delta(ap,lamda)
 
 	def calculatePPs(self):
 		self.mgas=self.Mgas/self.Nw*1e-3
@@ -47,8 +47,8 @@ class PP:
 		self.cion=(8*self.k*self.T/np.pi/self.mion)**0.5
 		self.ap=self.dp*0.5
 		self.Cc=functions.Cc(self.dp)
-		self.ramda=functions.ramda(self.Dion,self.mig,self.T)
-		self.delta=functions.delta(self.ap,self.ramda)
+		self.lamda=functions.lamda(self.Dion,self.mig,self.T)
+		self.delta=functions.delta(self.ap,self.lamda)
 		self.bm=np.zeros((2*self.N+1,2))+1
 		self.integral=np.zeros((2*self.N+1,2))
 

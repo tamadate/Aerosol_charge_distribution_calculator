@@ -164,9 +164,3 @@ imageforce.place(x=615, y=350)
 
 
 window.mainloop()
-
-
-
-
-
-
