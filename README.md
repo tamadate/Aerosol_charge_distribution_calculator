@@ -15,7 +15,7 @@ where $A^z$ is $z$ charged particle and $B^{\pm}$ is the positive or  negative i
 $${dN_{z}\over{dt}}=-\beta_{z}^{+}N_{+}N_{z}-\beta_{z}^{-}N_{-}N_{z}+\beta_{z+1}^{-}N_{-}N_{z+1}+\beta_{z-1}^{+}N_{+}N_{z-1}$$  
 $N_z$ is the concentraiton of charged particle $A^z$ and $N_{+}/N_{-}$ are the positive/negative charged ion concentrations.  $\beta_{z}^{\pm}$ is the collision rate coefficient of $z$ charged particle and negatively or positively charged ion, $A^z$ and $B^{\pm}$.  To simplify the calculation, in this calculation code, the particle concentration is normalized by the total particle concentration $N_0=\Sigma^\infty_{i=-\infty}N_i$.
 In this equaiton, the concentrations are experimental conditions and collision rate coefficients are theoretically estimatable parameter which  calculation method is shown in following part.
-### Collision rate coefficient ($\beta$)
+### Collision rate coefficient, $\beta$
 Currently, this code support three different collision rate coefficient calculaiton method (Fuchs, Hoppel & Frick, and LD based).
 * Limiting sphere model (Fuchs)
 Fuchs proposed follwing equaiton which called limiting sphere theory:
