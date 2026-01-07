@@ -3,13 +3,18 @@ import numpy as np
 from decimal import Decimal, ROUND_HALF_UP
 import collisionRate
 import functions
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import pandas as pd  # CSV読むなら（なければnumpyでもOK）
+
+
 
 collisionRate=collisionRate.collisionRate()
 
 #Generate window
 window=tk.Tk()
 window.title("Charge distribution calculator")
-window.geometry("750x470")
+window.geometry("730x800")
 
 #Generate physical property boxes
 Base=40
@@ -66,29 +71,55 @@ for i in np.arange(15):
 	betaEntry_p[i]=tk.Entry(width=Boxsize)
 	betaEntry_p[i].place(x=x4,y=Base+A*i)
 
+# ---- Plot area (embedded matplotlib) ----
+fig = Figure(figsize=(3.8, 2.6), dpi=80)   # サイズは好みで
+ax = fig.add_subplot(111)
+ax.set_xlabel("Time [s]")
+ax.set_ylabel("Normalized concentration [-]")
+
+canvas = FigureCanvasTkAgg(fig, master=window)
+canvas_widget = canvas.get_tk_widget()
+canvas_widget.place(x=10, y=480, width=700, height=300)  # 位置調整してね
+canvas.draw()
+
+
+def update_plot_from_csv(csv_path="chargeDistribution.csv", threshold=1e-3):
+    ax.cla()
+    ax.set_xlabel("Time [s]")
+    ax.set_ylabel("Normalized concentration [-]")
+
+    df = pd.read_csv(csv_path)
+    t = df["time"].values
+
+    # 各列（z=...）を描く
+    for col in df.columns[1:]:
+        y = df[col].values
+        if y[-1] > threshold:
+            ax.plot(t, y, label=col)
+
+    ax.legend(loc="upper right", fontsize=7)
+    canvas.draw()
+
 
 #Get numbers from input boxes
 def setPP():
-	collisionRate.PPs.p=float(ppEntry[0].get())*101300
-	collisionRate.PPs.T=float(ppEntry[1].get())
-	collisionRate.PPs.Mgas=float(ppEntry[2].get())
-	collisionRate.PPs.myu=float(ppEntry[3].get())
-	collisionRate.PPs.dp=float(ppEntry[4].get())*1e-6
-	collisionRate.PPs.rhop=float(ppEntry[5].get())
-	collisionRate.PPs.Dp=float(ppEntry[6].get())*1e-4
-	collisionRate.dt=float(ppEntry[8].get())
-	collisionRate.tmax=float(ppEntry[9].get())
-	collisionRate.PPs.Kion[1]=float(ppEntry[10].get())*1e-4
-	collisionRate.PPs.Kion[0]=float(ppEntry[11].get())*1e-4
-	collisionRate.PPs.Mion[1]=float(ppEntry[12].get())
-	collisionRate.PPs.Mion[0]=float(ppEntry[13].get())
-	collisionRate.PPs.Cion[1]=float(ppEntry[14].get())*1e6
-	collisionRate.PPs.Cion[0]=float(ppEntry[15].get())*1e6
 	if bln.get():
-		collisionRate.PPs.ep=float(ppEntry[7].get())
+		Ep=float(ppEntry[7].get())
 	else:
-		collisionRate.PPs.ep=0
-
+		Ep=0
+	collisionRate.PPs.resetPPs(p=float(ppEntry[0].get())*101300,
+						   T = float(ppEntry[1].get()),
+						   Mgas = float(ppEntry[2].get()),
+						   myu = float(ppEntry[3].get()),
+						   dp = float(ppEntry[4].get())*1e-6,
+						   rhop = float(ppEntry[5].get()),
+						   Dp = float(ppEntry[6].get())*1e-4,
+						   Kion = np.array([float(ppEntry[10].get())*1e-4, float(ppEntry[11].get())*1e-4]),
+						   Mion = np.array([float(ppEntry[12].get()), float(ppEntry[13].get())]),
+						   Cion = np.array([float(ppEntry[14].get())*1e6, float(ppEntry[15].get())*1e6]),
+						   ep = Ep)
+	collisionRate.dt = float(ppEntry[8].get())
+	collisionRate.tmax = float(ppEntry[9].get())
 #Put normal conditions into the boxes
 def	NormalCond():
 	for i in np.arange(np.size(ppEntry)):
@@ -114,6 +145,7 @@ def	setbeta():
 
 def	calculateFuchs():
 	setPP()
+	collisionRate.showParameters()
 	collisionRate.computeFuchsBeta()
 	setbeta()
 
@@ -130,7 +162,8 @@ def timedevelop():
 		collisionRate.PPs.beta[i][0]=float(betaEntry_p[i].get())
 		collisionRate.PPs.beta[i][1]=float(betaEntry_m[i].get())
 	setPP()
-	collisionRate.Time_develop()
+	collisionRate.Time_develop(save_every=1000, plot=False, out_prefix="chargeDistribution")
+	update_plot_from_csv("chargeDistribution.csv")
 
 def calcDiff():
 	setPP()
@@ -164,9 +197,3 @@ imageforce.place(x=615, y=350)
 
 
 window.mainloop()
-
-
-
-
-
-

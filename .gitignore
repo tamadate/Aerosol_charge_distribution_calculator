@@ -1,0 +1,25 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+
+# ---- Executables / build ----
+build/
+dist/
+*.exe
+*.spec
+
+# ---- Virtual environment ----
+venv/
+.env/
+
+# ---- Logs / temp ----
+*.log
+*.tmp
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+
+main.ipynb
+chargeDistribution.csv
